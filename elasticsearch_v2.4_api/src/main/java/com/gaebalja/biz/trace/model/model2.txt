@@ -1,0 +1,30 @@
+[
+    {
+        "timestamp": 1503394114168,
+        "info": {
+            "method": "GET",
+            "path": "/trace",
+            "headers": {
+                "request": {
+                    "host": "localhost:9999",
+                    "connection": "keep-alive",
+                    "cache-control": "no-cache",
+                    "x-postman-interceptor-id": "8c5f4468-9ed2-49b4-b703-934d7845ef7a",
+                    "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36",
+                    "postman-token": "47f9c5c2-dbf5-73af-12bf-e8924134d7cc",
+                    "accept": "*/*",
+                    "accept-encoding": "gzip, deflate, br",
+                    "accept-language": "ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4",
+                    "cookie": "SCOUTER=z24uncisokv2gk; ssocioAdmin=7ynRsgxqC4Vk1U3+KJhEVQQu7geRylt+o1Yz4AfGR07VVRaScVshwkhF5KUFOR2hYCfLf9KMXEGbhJEWlQMOQb3uyGw++U0VXRWeBZmy9Bdgg+5NxWjmNWVlZX113K5At/cya95kPRHhcnGBI8cq5HXqhElqVLaxMqjIEtIxyW6acU05g0lj0p6KRBkOb0HdDP+/kycj3OhX/+AxAFSpSL9N2eh2uUfMJvyqDZNqeotc2eCDKjnJkNTNNeNAhL6ie993wfOuC65XxaE/wcN3Gw63LjTp5CFJidGutOClb1PW7ADrDHf3nU5Z0psMFWFtiCHLbw1uRJV9lMrhq8XHabSNqGjsqTQljIo45T/kAF0EcmHbQ5qvNq9QwHQdN3zpY4cSgitiri6hGVtJ71bD0Cunh0dt4SdIUKh866bgGQ9EL+6LbuDzUw29XCYYWuhrL0YGRsfNZD4tBLhXY1PBuexMboCNY9jf9R0q30yY4dOBZrcza75zzq5O2elIA0QQQUljWXEMswYgOyFgOwkUipPoglpsstm/tNY+BJ7kj4L1jNn4tQi70s/sxXJiq9aqYY0cQvw892+Hz3L51oPgDAdBU1Kh0ZStdEQkVLiQCoJctScz+AlMXC/VJmwiQuz8"
+                },
+                "response": {
+                    "X-Application-Context": "application:9999",
+                    "Content-Type": "application/json;charset=UTF-8",
+                    "Transfer-Encoding": "chunked",
+                    "Date": "Tue, 22 Aug 2017 09:28:34 GMT",
+                    "status": "200"
+                }
+            }
+        }
+    }
+]
