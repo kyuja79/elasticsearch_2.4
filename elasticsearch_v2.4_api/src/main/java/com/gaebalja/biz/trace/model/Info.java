@@ -2,6 +2,15 @@ package com.gaebalja.biz.trace.model;
 
 public class Info {
 	
+	public Info() {
+	}
+	
+	public Info(String method, String path, Headers headers) {
+		this.method = method;
+		this.path = path;
+		this.headers = headers;
+	}	
+	
 	private String method;
 	private String path;
 	private Headers headers;

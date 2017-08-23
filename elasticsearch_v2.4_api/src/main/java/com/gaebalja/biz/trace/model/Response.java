@@ -7,6 +7,47 @@ public class Response {
 	private String TransferEncoding;
 	private String Date;
 	private String status;
+	
+	public String getXApplicationContext() {
+		return XApplicationContext;
+	}
+
+	public void setXApplicationContext(String xApplicationContext) {
+		XApplicationContext = xApplicationContext;
+	}
+
+	public String getContentType() {
+		return ContentType;
+	}
+
+	public void setContentType(String contentType) {
+		ContentType = contentType;
+	}
+
+	public String getTransferEncoding() {
+		return TransferEncoding;
+	}
+
+	public void setTransferEncoding(String transferEncoding) {
+		TransferEncoding = transferEncoding;
+	}
+
+	public String getDate() {
+		return Date;
+	}
+
+	public void setDate(String date) {
+		Date = date;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

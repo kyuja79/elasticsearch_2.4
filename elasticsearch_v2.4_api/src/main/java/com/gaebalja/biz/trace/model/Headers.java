@@ -1,6 +1,14 @@
 package com.gaebalja.biz.trace.model;
 
 public class Headers {
+	
+	public Headers() {
+	}
+	public Headers(Request request, Response response) {
+		this.request = request;
+		this.response = response;
+	}
+	
 	private Request request;
 	private Response response;
 	public Request getRequest() {

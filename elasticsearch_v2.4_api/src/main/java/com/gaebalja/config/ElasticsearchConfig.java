@@ -15,10 +15,10 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 @Configuration
-//@EnableElasticsearchRepositories(basePackages = "com.gaebalja.biz")
-@EnableElasticsearchRepositories(basePackages = "org/springframework/data/elasticsearch/repositories")
 @PropertySource(value = { "classpath:application.properties" })
-public class ElasticSearchClientConfig {
+@EnableElasticsearchRepositories(basePackages = "com.gaebalja")
+//@EnableElasticsearchRepositories(basePackages = "org/springframework/data/elasticsearch/repositories")
+public class ElasticsearchConfig {
 	
     @Value("${elasticsearch.host}")
     private String elasticsearch_host;
@@ -32,7 +32,7 @@ public class ElasticSearchClientConfig {
     @Bean
     public ElasticsearchOperations elasticsearchTemplate() throws Exception {
     	return new ElasticsearchTemplate(client());
-    }    
+    }
     
     /**
      * https://www.elastic.co/guide/en/elasticsearch/client/java-api/2.4/transport-client.html
@@ -42,7 +42,9 @@ public class ElasticSearchClientConfig {
     @Bean
     public Client client() throws Exception {
         Settings esSettings = Settings.settingsBuilder()
-                .put("cluster.name", elasticsearch_host)
+                .put("cluster.name", elasticsearch_clustername)
+                .put("client.transport.ignore_cluster_name", true)
+                .put("node.client", true)
                 .put("client.transport.sniff", true)
                 .build();
         

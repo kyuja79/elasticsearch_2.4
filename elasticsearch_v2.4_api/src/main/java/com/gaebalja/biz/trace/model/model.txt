@@ -1,6 +1,7 @@
 [
     {
         "timestamp": 1503366365379,
+        "author": "ssocioapi",
         "info": {
             "method": "POST",
             "path": "/search/books",
