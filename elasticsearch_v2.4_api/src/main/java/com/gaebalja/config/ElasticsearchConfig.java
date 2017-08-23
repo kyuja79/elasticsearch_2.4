@@ -44,6 +44,7 @@ public class ElasticsearchConfig {
         Settings esSettings = Settings.settingsBuilder()
                 .put("cluster.name", elasticsearch_clustername)
                 .put("client.transport.ignore_cluster_name", true)
+                .put("index.mapping.ignore_malformed", true)
                 .put("node.client", true)
                 .put("client.transport.sniff", true)
                 .build();

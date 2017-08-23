@@ -1,14 +1,23 @@
 package com.gaebalja.biz.trace.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Request {
 	private String host;
 	private String connection;
+	@JsonProperty("content-length")
 	private String contentLength;
+	@JsonProperty("cache-control")
 	private String cacheControl;
+	
+	@JsonProperty("user-agent")
 	private String userAgent;
+	@JsonProperty("content-type")
 	private String contentType;
 	private String accept;
+	@JsonProperty("accept-encoding")
 	private String acceptEncoding;
+	@JsonProperty("accept-language")
 	private String acceptLanguage;
 	private String cookie;
 	

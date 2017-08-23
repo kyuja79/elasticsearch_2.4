@@ -10,10 +10,10 @@ public class Trace {
 	public Trace(String id){
 		this.id = id;
 	}
-	public Trace(String id, long timestamp, String author, Info info){
+	public Trace(String id, long timestamp, Info info){
 		this.id = id;
 		this.timestamp = timestamp;
-		this.author = author;
+//		this.author = author;
 		this.info = info;
 	}
 	@Id
@@ -49,9 +49,8 @@ public class Trace {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append(super.toString()).append(" timestamp=").append(timestamp).append(", info=").append(info)
-				.append(", author=").append(author);
+		builder.append(super.toString()).append(" id=").append(id).append(", timestamp=").append(timestamp)
+				.append(", author=").append(author).append(", info=").append(info);
 		return builder.toString();
 	}
-
 }
