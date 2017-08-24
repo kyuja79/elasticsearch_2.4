@@ -16,11 +16,11 @@ import com.gaebalja.biz.trace.model.Info;
 import com.gaebalja.biz.trace.model.Request;
 import com.gaebalja.biz.trace.model.Response;
 import com.gaebalja.biz.trace.model.Trace;
-import com.gaebalja.biz.trace.service.TraceServiceByRepository;
+import com.gaebalja.biz.trace.service.TraceLogServiceByRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-public class TraceServiceTest {
+public class TraceLogServiceTest {
 	
 	/*
 	@Autowired private TraceServiceByRepository traceService;

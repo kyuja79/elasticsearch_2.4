@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.gaebalja.biz.trace.model.Trace;
 
 @Repository
-public interface TraceRepository extends ElasticsearchRepository<Trace, String>{
+public interface TraceLogRepository extends ElasticsearchRepository<Trace, String>{
 	
 	Page<Trace> findByAuthor(String author, Pageable pageable);
 	

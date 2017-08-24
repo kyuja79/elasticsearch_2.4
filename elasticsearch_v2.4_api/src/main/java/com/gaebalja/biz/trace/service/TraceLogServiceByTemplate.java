@@ -15,7 +15,7 @@ import com.gaebalja.biz.trace.model.Trace;
 import com.gaebalja.common.DateUtils;
 
 @Service
-public class TraceServiceByTemplate {
+public class TraceLogServiceByTemplate {
 
 	@Autowired
 	private ElasticsearchTemplate elasticsearchTemplate;

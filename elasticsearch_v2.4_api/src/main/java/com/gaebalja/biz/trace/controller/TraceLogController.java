@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gaebalja.biz.trace.model.Trace;
-import com.gaebalja.biz.trace.service.TraceServiceByTemplate;
+import com.gaebalja.biz.trace.service.TraceLogServiceByTemplate;
 
 @RestController
 @RequestMapping(value= "/trace", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-public class TraceController {
+public class TraceLogController {
 	
 	@Autowired 
-	private TraceServiceByTemplate traceTempService;
+	private TraceLogServiceByTemplate traceLogTempService;
 	
 //	@PostMapping("/save")
 //	public Trace save(@RequestBody Trace trace){
@@ -26,7 +26,7 @@ public class TraceController {
 	@Async
 	@PostMapping("/save")
 	public String save(@RequestBody Trace trace){
-		return traceTempService.save(trace);
+		return traceLogTempService.save(trace);
 	}
 	
 }
