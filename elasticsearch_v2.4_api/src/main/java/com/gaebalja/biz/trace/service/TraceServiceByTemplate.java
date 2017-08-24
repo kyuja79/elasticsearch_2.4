@@ -27,6 +27,10 @@ public class TraceServiceByTemplate {
             if (!elasticsearchTemplate.indexExists(traceIndex)) {    
                 elasticsearchTemplate.createIndex(traceIndex);    
             }
+            // settings
+            // TODO : kyuja --> settings
+            
+            // mappings
 			elasticsearchTemplate.putMapping(traceIndex, "trace", getMapping());
 		} catch (IOException e) {
 			e.printStackTrace();
