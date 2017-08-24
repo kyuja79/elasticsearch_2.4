@@ -9,21 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gaebalja.biz.trace.model.Trace;
-import com.gaebalja.biz.trace.service.TraceService;
+import com.gaebalja.biz.trace.service.TraceServiceByTemplate;
 
 @RestController
 @RequestMapping(value= "/trace", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class TraceController {
 	
-	@Autowired
-	private TraceService traceService;
+	@Autowired 
+	private TraceServiceByTemplate traceTempService;
 	
-//	@Async
+//	@PostMapping("/save")
+//	public Trace save(@RequestBody Trace trace){
+//		return traceRepoService.save(trace);
+//	}
+	
+	@Async
 	@PostMapping("/save")
-	public Trace save(@RequestBody Trace trace){
-		System.out.println(trace.toString());
-		trace.setId(String.valueOf(trace.getTimestamp()));
-		trace.setAuthor(trace.getInfo().getAuthor());
-		return traceService.save(trace); 
+	public String save(@RequestBody Trace trace){
+		return traceTempService.save(trace);
 	}
+	
 }

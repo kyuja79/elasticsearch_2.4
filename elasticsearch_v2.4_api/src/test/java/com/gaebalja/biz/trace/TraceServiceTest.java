@@ -16,14 +16,14 @@ import com.gaebalja.biz.trace.model.Info;
 import com.gaebalja.biz.trace.model.Request;
 import com.gaebalja.biz.trace.model.Response;
 import com.gaebalja.biz.trace.model.Trace;
-import com.gaebalja.biz.trace.service.TraceService;
+import com.gaebalja.biz.trace.service.TraceServiceByRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 public class TraceServiceTest {
 	
-	@Autowired
-	private TraceService traceService;
+	/*
+	@Autowired private TraceServiceByRepository traceService;
 	
 	@Before
 	public void saveBefore(){
@@ -34,7 +34,6 @@ public class TraceServiceTest {
 		req.setContentLength("73");
 		req.setCacheControl("no-cache");
 		req.setUserAgent("Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36");
-		req.setAccept("*/*");
 		req.setContentType("application/json");
 		req.setAcceptEncoding("gzip, deflate, br");
 		req.setAcceptLanguage("ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4");
@@ -64,4 +63,5 @@ public class TraceServiceTest {
 		System.out.println(findTrace.toString());
 	}
 	
+	*/
 }

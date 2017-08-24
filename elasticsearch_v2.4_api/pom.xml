@@ -57,8 +57,14 @@
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <scope>runtime</scope>
-        </dependency>		
-  	
+        </dependency>
+        		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		  	
 	</dependencies>
   
 	<build>

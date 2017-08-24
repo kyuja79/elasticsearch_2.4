@@ -59,6 +59,7 @@ public class TraceElasticsearchTemplateTest {
 		
 		IndexQuery indexQuery = new IndexQuery();
 	    indexQuery.setObject(trace);
+	    indexQuery.setIndexName("trace-2017-08-24");
 	    String index = elasticsearchTemplate.index(indexQuery);
 	    
 	    System.out.println("index = " + index);

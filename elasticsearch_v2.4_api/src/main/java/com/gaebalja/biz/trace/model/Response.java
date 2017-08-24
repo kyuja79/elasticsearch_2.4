@@ -11,7 +11,7 @@ public class Response {
 	private String TransferEncoding;
 	@JsonProperty("Content-Length")
 	private String ContentLength;
-	@JsonProperty("Date")
+	
 	private String Date;
 	private String status;
 	
