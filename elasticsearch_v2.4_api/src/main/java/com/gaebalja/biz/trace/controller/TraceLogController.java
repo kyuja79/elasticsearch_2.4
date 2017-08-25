@@ -1,5 +1,7 @@
 package com.gaebalja.biz.trace.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.Async;
@@ -15,6 +17,8 @@ import com.gaebalja.biz.trace.service.TraceLogServiceByTemplate;
 @RequestMapping(value= "/trace", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class TraceLogController {
 	
+	private static Logger logger = LoggerFactory.getLogger(TraceLogController.class);
+			
 	@Autowired 
 	private TraceLogServiceByTemplate traceLogTempService;
 	
@@ -25,8 +29,9 @@ public class TraceLogController {
 	
 	@Async
 	@PostMapping("/save")
-	public String save(@RequestBody Trace trace){
-		return traceLogTempService.save(trace);
+	public void save(@RequestBody Trace trace){
+		String index = traceLogTempService.save(trace);
+		logger.info("index" + index);
 	}
 	
 }

@@ -9,7 +9,6 @@ import javax.validation.ValidatorFactory;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -17,7 +16,6 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 
 @EnableAsync
 @Configuration
-@PropertySource(value = { "classpath:application.properties" })
 public class ApplicationConfig {
 	
 	@Bean
